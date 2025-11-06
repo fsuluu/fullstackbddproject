@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cypress Test Dashboard</title>
+</head>
+<body>
+  <h1>Cypress Test Dashboard</h1>
+  <div id="root"></div>
+
+  <script>
+    // Cypress testleri window.addItem() ile veri gönderecek
+    window.addItem = (type, text) => {
+      const root = document.getElementById('root');
+      const div = document.createElement('div');
+      div.textContent = type.toUpperCase() + ': ' + text;
+      div.style.border = '1px solid #ccc';
+      div.style.margin = '5px 0';
+      div.style.padding = '5px';
+      div.style.borderRadius = '5px';
+      div.style.backgroundColor = '#f9f9f9';
+      root.appendChild(div);
+    }
+  </script>
+</body>
+</html>
